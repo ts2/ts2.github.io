@@ -1,0 +1,18 @@
+
+
+.ts2_nav {
+	background-image: url("../images/banner.jpeg");
+	background-repeat: none;
+	
+}
+.jumbotron h1 {
+	color: #888888;
+	font-size: 16pt;
+	font-family: monospace;
+	border-left: 10px solid orange;
+	border-right: 20px solid green;
+	padding: 3px 0 3px 30px;
+	border-top: 2px dashed #dddddd;
+	border-bottom: 2px dashed #dddddd;
+}
+
