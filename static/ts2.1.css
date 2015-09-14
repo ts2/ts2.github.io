@@ -1,13 +1,20 @@
 
 
 .ts2_nav {
+	background-color: black;
 	background-image: url("../images/banner.jpeg");
 	background-repeat: none;
+	background-position:  left 0 top 30px;
+	height: 80px;
+	
+}
+.ts2_nav a {
+	font-family: monospace;
 	
 }
 
 .jumbotron {
-	margin-top: 30px;	
+	margin-top: 50px;	
 }
 .jumbotron h1 {
 	color: #444444;
