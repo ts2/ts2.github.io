@@ -10,14 +10,17 @@
 	margin-top: 30px;	
 }
 .jumbotron h1 {
-	color: #888888;
-	font-size: 16pt;
+	color: #444444;
+	font-size: 18pt;
 	font-family: monospace;
-	border-left: 10px solid orange;
-	border-right: 20px solid green;
-	padding: 3px 0 3px 30px;
+	border-left: 10px solid #FFFF00;
+	border-right: 10px solid #00FF00;
+	padding: 5px 0 5px 30px;
 	border-top: 4px dashed #dddddd;
 	border-bottom: 4px dashed #dddddd;
+	
+}
+.jumbotron p {
 	
 }
 
