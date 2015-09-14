@@ -5,6 +5,10 @@
 	background-repeat: none;
 	
 }
+
+.jumbotron {
+	margin-top: 30px;	
+}
 .jumbotron h1 {
 	color: #888888;
 	font-size: 16pt;
@@ -14,5 +18,13 @@
 	padding: 3px 0 3px 30px;
 	border-top: 4px dashed #dddddd;
 	border-bottom: 4px dashed #dddddd;
+	
 }
 
+h2 {
+	font-family: monospace;
+	font-size: 15pt;
+	padding: 3px 5px;
+	background-color: #dddddd;
+	border-top-right-radius: 15px;
+}

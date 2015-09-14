@@ -7,9 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="ts2 - Train Signalling Simulator">
     <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" /> 
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-    <title>ts2 - Train Signalling Simulator - Open Source with PyQt5</title>
+    <title>TS2 - Train Signalling Simulator - Open Source with PyQt5</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -25,6 +26,11 @@
   </head>
 <body>
 
+<a href="https://github.com/ts2/ts2" target="github">
+<img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    
+
+
 <!-- Top nav -->
 <nav class="navbar navbar-inverse navbar-fixed-top ts2_nav">
 	<div class="container">
@@ -35,14 +41,16 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 		</button>
+		<img style="position: absolute; top: 5px; left: 5px; border: 0; z-index:444445;" src="/favicon.png" alt="ts2">
 		<a class="navbar-brand" href="#">ts2</a>
 	</div>
 	
 	<div id="navbar" class="navbar-collapse collapse">
 		<ul class="nav navbar-nav">
-		<li class="active"><a href="#">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#contact">Contact</a></li>
+		<li class="active"><a href="http://github.com/ts2/ts2">Code</a></li>
+		<li><a href="http://github.com/ts2/ts2">Data</a></li>
+		<li><a href="http://docs-ts2.rhcloud.com/" target="_api_docs">API Docs</a></li>
+		<!----
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 			<ul class="dropdown-menu">
@@ -54,13 +62,14 @@
 			<li><a href="#">Separated link</a></li>
 			<li><a href="#">One more separated link</a></li>
 			</ul>
-		</li>
+		</li> --->
 		</ul>
+		<!---
 		<ul class="nav navbar-nav navbar-right">
 		<li><a href="../navbar/">Default</a></li>
 		<li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
 		<li><a href="../navbar-fixed-top/">Fixed top</a></li>
-		</ul>
+		</ul> --->
 	</div><!--/.nav-collapse -->
 	
 	</div>
@@ -73,9 +82,9 @@
 	<!-- Main component for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<h1>Train Signalling Simulator (TS2)</h1>
-		<p>A railway signalling simulation scenario with dispatch of trains across an area and keeping them on schedule to the timetable.</p>
-		
-		<p>
+		<p style="text-align: center;">A railway simulation game where you have to dispatch trains across an area and keep them on schedule</p>
+		<p style="text-align: center;"><img src="/images/screenshot.jpeg"></p>
+		<p style="text-align: center;">
 			<a class="btn btn-lg btn-primary" href="#" role="button">Install &amp; Download &raquo;</a>
 		</p>
 	</div>
@@ -85,57 +94,64 @@
 <!-- The col starter -->
 
 <div class="container">
-	<!-- Example row of columns -->
+
 	<div class="row">
+	
+		<div class="col-md-3">
+			<h2>Latest</h2>
+			<p>2015-07-14: TS2 v0.5.0 is released !</p>
+			<ul>
+				<li>Improved editor including the following features
+					<ul>
+						<li>Multi-selection</li>
+						<li>Copy/Paste</li>
+						<li>Mass setting of properties</li>
+						<li>Resizing of platform items with mouse</li>
+					</ul>
+				</li>
+				<li>New signals with :
+					<ul>
+						<li>Short length</li>
+						<li>Freely positionable berth</li>
+						<li>New signal types, including UK 4 aspects signals</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
 		<div class="col-md-5">
-		<h2>Features</h2>
-		<ul>
-			<li>Real-time simulation of a train signalling control centre</li>
-			<li>Simulations are file based and can be edited by users within the editor</li>
-			<li>Everything can be changed through the editor, including :scenery layout, allowed routes, timetables and train characteristics (speed, acceleration, braking, length, ...)</li>
-			<li>Simulation scenes have no limitation in size or arrangement</li>
-		</ul>
-	</div>
-	<div class="col-md-4">
-		<h2>Newbie Guides</h2>
-		<ul>
-			<li><a href="http://www.railway-technical.com/sigtxt1.shtml">Principles of signalling</a></li>
-			<li><a href="https://en.wikipedia.org/wiki/UK_railway_signalling#Colour_light_signals">Color lights</a></li>
-			<li><a href="https://en.wikipedia.org/wiki/Westlock_Interlocking">Interlocking</a></li>
-		</ul>
-	</div>
-	<div class="col-md-3">
-	<h2>Latest</h2>
-	<p>Circa autum 2015, a few majot changes.. The project is moving to github, pyqt5 and python 3, future scenario with json data storage, even a www site soon.</p>
-	<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			<h2>Features</h2>
+			<ul>
+				<li>Real-time simulation of a train signalling control centre</li>
+				<li>Simulations are file based and can be edited by users within the editor</li>
+				<li>Everything can be changed through the editor, including :scenery layout, allowed routes, timetables and train characteristics (speed, acceleration, braking, length, ...)</li>
+				<li>Simulation scenes have no limitation in size or arrangement</li>
+			</ul>
+			
+			<h2>Status</h2>
+			<p>TS2 is beta software, meaning it is playable, but lacks many features that one would expect from a simulation. TS2 is provided with two basic simulations:
+				<ul>
+				<li>A demo simulation called "drain"</li>
+				<li>A full-featured simulation called "liverpool-st"</li>
+				</ul>
+				New simulations can be created with the editor provided with ts2.</p>
+		</div>
+		
+		<div class="col-md-4">
+			<h2>Newbie Guides</h2>
+			<ul>
+				<li><a href="http://www.railway-technical.com/sigtxt1.shtml">Principles of signalling</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/UK_railway_signalling#Colour_light_signals">Color lights</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Westlock_Interlocking">Interlocking</a></li>
+			</ul>
+			
+			
+		</div>
 	</div>
 </div>
 
 
-<div class="container">
-	<h1>Controller</h1>
-	<!-- Example row of columns -->
-	<div class="row">
-		<div class="col-md-5">
-		<h2>Controller data</h2>
-		<ul>
-			<li>RWere moving scenarios into https://github.com/ts2/ts2-data</li>
-		</ul>
-	</div>
-	<div class="col-md-4">
-		<h2>Simulation</h2>
-		<ul>
-			<li><a href="#">Abstract of signals</a></li>
-			<li><a href="#">Color lights per country</a></li>
-			<li><a href="#">Interlocking is a TODO</a></li>
-		</ul>
-	</div>
-	<div class="col-md-3">
-		<h2>Contribute</h2>
-		<p>I;m pedromorgan and I look after website, the BDFL is nick, but please  contribute..</p>
-		<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-	</div>
-</div>
+
 
 </body>
 </html>
