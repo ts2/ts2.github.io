@@ -4,7 +4,7 @@
 	background-color: black;
 	background-image: url("../images/banner.jpeg");
 	background-repeat: none;
-	background-position:  left 0 top 30px;
+	background-position:  left -70px top 20px;
 	height: 80px;
 	
 }
@@ -13,17 +13,19 @@
 }
 
 .jumbotron {
-	margin-top: 50px;	
+    sbackground-color: #dddddd;
+    padding-top: 10px;
 }
 .jumbotron h1 {
 	color: #444444;
-	font-size: 18pt;
+	font-size: 20pt;
 	font-family: monospace;
+        text-align: center;
 	border-left: 10px solid #FFFF00;
 	border-right: 10px solid #00FF00;
 	padding: 5px 0 5px 30px;
-	border-top: 4px dashed #dddddd;
-	border-bottom: 4px dashed #dddddd;
+	deadborder-top: 4px dashed #aaaaaa;
+	deadborder-bottom: 4px dashed #aaaaaa;
 	
 }
 .jumbotron p {

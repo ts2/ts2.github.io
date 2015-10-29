@@ -1,186 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="ts2 - Train Signalling Simulator">
     <meta name="author" content="ts2 team">
-	<link rel="icon" href="https://ts2.github.io/favicon.ico" type="image/x-icon" /> 
-	<link rel="shortcut icon" href="https://ts2.github.io/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="https://ts2.github.io/favicon.ico" type="image/x-icon" /> 
+    <link rel="shortcut icon" href="https://ts2.github.io/favicon.ico" type="image/x-icon" />
 
     <title>TS2 - Train Signalling Simulator - Open Source with PyQt5</title>
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	
-	<link rel="stylesheet" href="/static/ts2.1.css">
-	
-  </head>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="/static/ts2.1.css">
+    
+</head>
 <body>
 
+<!-- github at top right -->
 <a href="https://github.com/ts2/ts2" target="github">
 <img style="position: absolute; top: 0; right: 0; border: 0; z-index:444444;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     
 
 
 <!-- Top nav -->
-<nav class="navbar navbar-inverse navbar-fixed-top ts2_nav">
-	<div class="container">
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		</button>
-		<img style="position: absolute; top: 5px; left: 5px; border: 0; z-index:444445;" src="/favicon.png" alt="ts2">
-		<a class="navbar-brand" href="#"><b>ts2</b></a>
-	</div>
-	
-	<div id="navbar" class="navbar-collapse collapse">
-		<ul class="nav navbar-nav">
-		<li><a href="https://github.com/ts2/ts2/releases" target="_download">Download</a></li>
-		<li><a href="https://github.com/ts2/ts2/issues" target="_download">Feedback &amp; Bugs</a></li>
-		<li><a href="http://github.com/ts2/ts2">Code</a></li>
-		<li><a href="http://github.com/ts2/ts2-data">Data</a></li>
-		<li><a href="http://docs-ts2.rhcloud.com/" target="_api_docs">API Docs</a></li>
-		<!----
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Another action</a></li>
-			<li><a href="#">Something else here</a></li>
-			<li role="separator" class="divider"></li>
-			<li class="dropdown-header">Nav header</li>
-			<li><a href="#">Separated link</a></li>
-			<li><a href="#">One more separated link</a></li>
-			</ul>
-		</li> --->
-		</ul>
-		<!---
-		<ul class="nav navbar-nav navbar-right">
-		<li><a href="../navbar/">Default</a></li>
-		<li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-		<li><a href="../navbar-fixed-top/">Fixed top</a></li>
-		</ul> --->
-	</div><!--/.nav-collapse -->
-	
-	</div>
+<nav class="navbar navbar-inverse  ts2_nav">
+        <div class="container">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <img style="position: absolute; top: 5px; left: 5px; border: 0; z-index:444445;" src="/favicon-ani.gif" alt="ts2">
+                <a class="navbar-brand" href="#"><b>ts2</b></a>
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                <li><a href="https://github.com/ts2/ts2/releases" target="_download">Download</a></li>
+                <li><a href="https://github.com/ts2/ts2/issues" target="_download">Feedback &amp; Bugs</a></li>
+                <li><a href="http://github.com/ts2/ts2">Code</a></li>
+                <li><a href="http://github.com/ts2/ts2-data">Data</a></li>
+                <li><a href="http://docs-ts2.rhcloud.com/" target="_api_docs">API Docs</a></li>
+                <!----
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                        </ul>
+                </li> --->
+                </ul>
+                <!---
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="../navbar/">Default</a></li>
+                <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                </ul> --->
+        </div><!--/.nav-collapse -->
+        
+        </div>
 </nav>
+
+<!-- Jumbotron  Intro  -->  
+<div class="container">
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+                <h1>ts2 - Train Signalling Simulator</h1>
+                <p style="text-align: center; font-size: 12pt;">An open source railway simulation game where you have to dispatch trains across an area and keep them on schedule</p>
+                <p style="text-align: center;">
+                        <a class="btn btn-lg btn-primary" href="https://github.com/ts2/ts2/releases" role="button" target="_blank">&laquo; Download &amp; Install &raquo;</a>
+                </p>
+        </div>
+
+</div> <!-- end Jumbotron -->
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 80%; margin:0 auto; border: 2px solid #666666;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+    
+        <div class="item active">
+            <img src="/images/screenshot0.jpeg">
+        </div>
+        
+        <div class="item">
+            <img src="/images/screenshot1.jpeg">
+        </div>
+        
+        <div class="item">
+            <img src="/images/screenshot2.jpeg">
+        </div>
+        
+        <div class="item">
+            <img src="/images/screenshot3.jpeg">
+        </div>
+        
+        <div class="item">
+            <img src="/images/screenshot4.jpeg">
+        </div>
+        
+        <div class="item">
+            <img src="/images/screenshot5.jpeg">
+        </div>
+        
+    </div>
+</div><!-- /.carousel -->
     
 
-<!-- Jumbotron  INTO>>> -->  
-<div class="container">
-
-	<!-- Main component for a primary marketing message or call to action -->
-	<div class="jumbotron">
-		<h1>Train Signalling Simulator (TS2)</h1>
-		<p style="text-align: center; font-size: 12pt;">An open source railway simulation game where you have to dispatch trains across an area and keep them on schedule</p>
-		<p style="text-align: center;"><img src="/images/screenshot.jpeg"></p>
-		<p style="text-align: center;">
-			<a class="btn btn-lg btn-primary" href="https://github.com/ts2/ts2/releases" role="button" target="_blank">&laquo; Download &amp; Install &raquo;</a>
-		</p>
-	</div>
-
-</div> <!-- end<Jumbotron -->
 
 
 
 <div class="container">
 
-	<div class="row">
-	
-		<div class="col-md-3">
-			<h2>v0.6 - 2015-10-26</h2>
-			
-			<ul>
-				<li>NOTE: New release with Python3/PyQt5  only moving forwards</li>
-				<li>So many new things such as 
-					<ul>
-						<li>Multi-selection</li>
-						<li>Copy/Paste</li>
-						<li>Mass setting of properties</li>
-						<li>Resizing of platform items with mouse</li>
-					</ul>
-				</li>
-				<li>New signals with :
-					<ul>
-						<li>Short length</li>
-						<li>Freely positionable berth</li>
-						<li>New signal types, including UK 4 aspects signals</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		
-		<div class="col-md-5">
-			<h2>Features</h2>
-			<ul>
-				<li>Real-time simulation of a train signalling control centre</li>
-				<li>Simulations are file based and can be edited by users within the editor</li>
-				<li>Everything can be changed through the editor, including :scenery layout, allowed routes, timetables and train characteristics (speed, acceleration, braking, length, ...)</li>
-				<li>Simulation scenes have no limitation in size or arrangement</li>
-			</ul>
-			
-			<h2>Status</h2>
-			<p>TS2 is beta software, meaning it is playable, but lacks many features that one would expect from a simulation. TS2 is provided with two basic simulations:
-				<ul>
-				<li>A demo simulation called "drain"</li>
-				<li>A full-featured simulation called "liverpool-st"</li>
-				</ul>
-				New simulations can be created with the editor provided with ts2.</p>
-		</div>
-		
+        <div class="row">
+        
+                <div class="col-md-3">
+                        <h2>v0.6 - 2015-10-26</h2>
+                        
+                        <ul>
+                                <li>NOTE: New release with Python3/PyQt5  and moving forwards</li>
+                                <li>So many new things such as 
+                                        <ul>
+                                                <li> Data is now json and in ts2-data</li>
+                                                <li>Ability to download sims / signals from ts2-data</li>
+                                                <li>Trains shunting</li>
+                                                <li>Trains splitting (joining postponed)</li>
+                                        </ul>
+                                </li>
+                                <li>Signals update with :
+                                        <ul>
+                                                <li>New parametric signals</li>
+                                                <li>French BAL signals (except blinking)</li>
+                                                <li>UK Shunt signalss</li>
+                                        </ul>
+                                </li>
+                        </ul>
+                </div>
+                
+                <div class="col-md-5">
+                    <h2>Features</h2>
+                    <ul>
+                            <li>Real-time simulation of a train signalling control centre</li>
+                            <li>Simulations are file based and can be edited by users within the editor</li>
+                            <li>Everything can be changed through the editor, including :scenery layout, allowed routes, timetables and train characteristics (speed, acceleration, braking, length, ...)</li>
+                            <li>Simulation scenes have no limitation in size or arrangement</li>
+                    </ul>
+                    
+                    <h2>Status</h2>
+                    <p>
+                        TS2 is beta software, meaning it is playable, but lacks many features that one would expect from a simulation. TS2 is provided with two basic simulations:
+                        <ul>
+                            <li>A demo simulation called "drain"</li>
+                            <li>A full-featured simulation called "liverpool-st"</li>
+                        </ul>
+                        New simulations can be created with the editor provided with ts2.
+                    </p>
+                </div>
+                
 
-		
-		
-		<div class="col-md-4">
-		
-			<h2>Developers Notice</h2>
-			
-			<ul>
-				<li>Red moon update Autunm 2015</li>
-				<li>Project has recently moved from <a href="http://ts2.sf.net">ts2.sourceforge.net</a> to <a href="http://github.com/ts2">github.com/ts2</a></li>
-				<li>The next v0.6 release is <b>PyQt5 and python3 only</b><br>
-					See Devlelop branch<a href="https://github.com/ts2/ts2/tree/develop">`develop`</a> branch</li>
-				<li>Storage format is json text instead of sqlite blobs, and a new data repos at <a href="http://github.com/ts2/ts2-data">github.com/ts2/ts2-data</a></li>
-				<li>Next step is cleanup code, get releases working quicker and share sims easily..</li>
-			</ul>
-			
-			
-			<h2>Newbie Guides</h2>
-			<ul>
-				<li><a href="http://www.railway-technical.com/sigtxt1.shtml">Principles of signalling</a></li>
-				<li><a href="https://en.wikipedia.org/wiki/UK_railway_signalling#Colour_light_signals">Color lights</a></li>
-				<li><a href="https://en.wikipedia.org/wiki/Westlock_Interlocking">Interlocking</a></li>
-			</ul>
-		</div>
-		
-	</div>
+                
+                
+                <div class="col-md-4">
+                
+                        <h2>Developers Notice</h2>
+                        
+                        <ul>
+                                <li>Prepare for <a href="https://github.com/ts2/ts2/wiki/New-Arch"><b>Next Gen</b></a> </li>
+                        </ul>
+                        
+                        
+                        <h2>Newbie Guides</h2>
+                        <ul>
+                                <li><a href="http://www.railway-technical.com/sigtxt1.shtml">Principles of signalling</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/UK_railway_signalling#Colour_light_signals">Color lights</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/Westlock_Interlocking">Interlocking</a></li>
+                        </ul>
+                </div>
+                
+        </div>
 </div>
 
-<!--
-<a name="install"></a>
-<div class="container">
-
-	<div class="row">
-		<h1>Download &amp; Install</h1>
-		<div class="col-md-3">
-		
-		
-		</div>
-	</div>
-</div>
--->
 
 </body>
 </html>
